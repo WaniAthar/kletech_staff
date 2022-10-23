@@ -1,5 +1,6 @@
 # kletech_staff
 KLETU's staff portfolio
+(incomplete)
 
 # Installation
 1. Clone the repository ```git clone https://github.com/WaniAthar/kletech_staff.git```
