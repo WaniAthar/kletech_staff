@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block home_active %}active{% endblock home_active %}
+{% block body %}
+{% for user in staff %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <img src="media/{{user.image}}" class="card-img-top" alt="...">
+      <h5 class="card-title">{{user.user.get_full_name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{user.designation}}</h6>
+      <p class="card-text">email: {{user.user.email}}</p>
+      <p class="card-text">department: {{user.department}}</p>
+      <a href="https://{{user.irns_link}}" class="card-link">irns link</a>
+      <a href="https://{{user.scholar_id_link}}" class="card-link">google scholar id</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock body %}
