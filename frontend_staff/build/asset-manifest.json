@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/react-test/static/js/main.b6cb69c9.js",
+    "static/media/KLE_Logo.jpeg": "/react-test/static/media/KLE_Logo.c8613eab5ce0eec27e8b.jpeg",
+    "index.html": "/react-test/index.html",
+    "main.b6cb69c9.js.map": "/react-test/static/js/main.b6cb69c9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b6cb69c9.js"
+  ]
+}

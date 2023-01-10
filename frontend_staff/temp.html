@@ -1,0 +1,70 @@
+<!-- old jsx to create profile cards with no filter -->
+// function to generate faculty profile cards
+// function generateProfileCard() {
+//     return <div className="pt-18 pb-20 px-52 grid grid-cols-3 gap-y-10 text-center">
+//         {facultyData.map(data => (
+//             <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+//                 <a href="#">
+//                     <img class="h-48 mx-24 my-4 rounded-lg" src={profilepic} alt="" />
+//                 </a>
+//                 <div class="p-5">
+//                     <a href="#">
+//                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-2">{data.name}</h5>
+//                     </a>
+//                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 mx-2">{data.designation}</p>
+//                     <div className="flex py-1 justify-center">
+//                         <FaMapMarkerAlt className="mx-2" />
+//                         <p class="font-normal text-gray-700 dark:text-gray-400 text-sm">{data.department}</p>
+//                     </div>
+//                     <div className="flex py-1 justify-center">
+//                         <FaEnvelope className="mx-2" />
+//                         <span className="text-sm">{data.email}</span>
+//                     </div>
+//                     <Link to="/profile" class="inline-flex items-center py-2 mt-5 px-3 text-sm font-medium text-center text-white bg-[rgb(197,31,41)] rounded-lg hover:bg-[rgb(179,29,38)]  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+//                         Read more
+//                         <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+//                     </Link>
+//                 </div>
+//             </div>
+//         ))}
+//     </div>
+// }
+
+
+
+
+return <div className="pt-18 pb-20 px-52 grid grid-cols-3 gap-y-10 text-center">
+    {newData.staff.filter((data,index)=>{
+        if(searchTerm === ""){
+            return data
+        }else if(data.slug.toLowerCase().includes(searchTerm.toLowerCase())){
+            return data
+        }
+    }).map((data) => {
+        var slug = "/profile/" + data.slug;
+        return (selects === data.department) || (selects === 'All Departments') ? (<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="h-48 mx-24 my-4 rounded-lg" src={profilepic} alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white mx-2">{data.slug}</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 mx-2">{data.designation}</p>
+                <div className="flex py-1 justify-center">
+                    <FaMapMarkerAlt className="mx-2" />
+                    <p class="font-normal text-gray-700 dark:text-gray-400 text-sm">{data.department}</p>
+                </div>
+                <div className="flex py-1 justify-center">
+                    <FaEnvelope className="mx-2" />
+                    <span className="text-sm">{data.scholar_id_link}</span>
+                </div>
+                <Link to={data.slug} class="inline-flex items-center py-2 mt-5 px-3 text-sm font-medium text-center text-white bg-[rgb(197,31,41)] rounded-lg hover:bg-[rgb(179,29,38)]  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Read more
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </Link>
+            </div>
+        </div>)
+            : (<div></div>)
+    })}
+</div>
