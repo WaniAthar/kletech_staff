@@ -1,35 +1,73 @@
-+++++++KLE TECH STAFF PORTFOLIO+++++++++++
----------------------
-Team A8    
-============       
-Athar Mujtaba    
-Abhishek Patil    
-Shreya Devagiri
-Hrishikesh V
----------------------
-                                  < HOW TO RUN THE PROJECT>
-You can see two folders one for backend and one for frontend
-You have to execute both the codes in order to see the website running
 
-1. RUN THE BACKEND
-a) Open backend folder, inside that open kletech_staff folder
-b) Open terminal IN THAT FOLDER and run the command(python 3.9 has to be installed first):
- pip install -r requirements.txt
-c) hit enter
-d) after that run this command:
+# KLE Staff Portfolio
+
+KLE Staff Portfolio is a full-stack web application that showcases the work history and achievements of KLE Technological University staff. The front-end is built using ReactJS and styled with Tailwind CSS, while the back-end is powered by Django. This app provides an intuitive interface to display information about staff members, making it easy to browse and learn more about their expertise.
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/abhishekpatil4/KLE-Staff-Portfolio.git
+```
+
+Go to the project directory
+
+```bash
+  cd KLE-Staff-Portfolio
+```
+
+### Frontend
+
+```bash
+  cd frontend
+```
+Install dependencies
+
+```bash
+  npm install
+```
+Start the server 
+
+```bash
+  npm start
+```
+    
+### Backend 
+
+```bash
+  cd backend
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
   python manage.py runserver
- backend server will start 
+```
 
-2. RUN THE FRONTEND
-a) Open frontend folder
-b) Run 
-npm install
- or 
-npm i
-in the terminal IN THAT FOLDER(NodeJs has to be installed first).
-c) after that Run this command and development server will start:
-npm start
 
-+++++++++++++++++end++++++++++++++++++
+## Demo
+
+### Home 
+https://user-images.githubusercontent.com/83769052/221409008-51a55bc7-02d2-4d71-a8a6-360d399f7fe3.mp4
+
+### Profile
+https://user-images.githubusercontent.com/83769052/221409092-cc09c619-9858-4848-b6b7-0b112e791b96.mp4
+
+### Admin/Staff Portal
+
+![Home](https://user-images.githubusercontent.com/83769052/221409312-89895e21-22c7-4da1-930c-027350c5d68b.jpg)
+
+### Adding New User/Staff
+
+![adding_user](https://user-images.githubusercontent.com/83769052/221409357-a6c5b7ff-ccb5-4c4b-8bd5-e2710f5c4372.jpg)
+
+![adding_staff](https://user-images.githubusercontent.com/83769052/221409379-be709c0b-6aac-4e33-8e21-c84e39231fe5.jpg)
 
 
